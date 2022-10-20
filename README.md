@@ -3,7 +3,7 @@ Third project of <a href="https://www.theodinproject.com/about">The Odin Project
 
 This is a two-versions project of a rock paper scissors game to practice JavaScript.
 
-You can look the page and play the game clicking <a href="https://araujodanield.github.io/odin-rock-paper-scissors/">here</a>!
+You can look the page and play the game clicking <a href="https://araujodanield.github.io/odin-rock-paper-scissors/" target="_blank">here</a>!
 
 </br>
 
