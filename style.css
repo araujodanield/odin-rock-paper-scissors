@@ -1,75 +1,106 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-body {
-    background-color: rgb(235 219 191);
+* {
     margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: rgb(219, 224, 248);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    color: rgb(42, 50, 66);
+}
+
+img {
+    min-width: 80px;
+    max-width: 80px;
+    min-height: 80px;
+    max-height: 80px;
 }
 
 .title {
     display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'Press Start 2P', cursive;
     margin-top: 50px;
     color: rgb(42, 50, 66);
     text-shadow: 5px 3px 5px rgba(0, 0, 0, 0.212);
 }
 
-.tutorial {
+.game-board {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(42, 50, 66);
-    color: rgb(240, 248, 255);
-    width: 700px;
-    padding: 50px;
-    border-radius: 10px;
-    box-shadow: 7px 10px 8px rgba(0, 0, 0, 0.212);
+    gap: 25px;
+    margin: auto;
+    font-size: 30px;
+    width: 100%;
 }
 
-.tutorial h2 {
-    font-family: 'Press Start 2P', cursive;
-    margin-bottom: 20px;
+h2 {
+    color: tomato;
 }
 
-.tutorial p, ol, ul, li {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.tutorial b {
-    color: rgb(217 237 255);
-}
-
-.tutorial span {
-    color: #ff6c6c;
-    font-weight: bold;
-}
-
-.tutorial img {
-    margin: 20px 100px;
+.option-choosed {
     display: flex;
+    justify-content: space-around;
     align-items: center;
+    width: 50%;
 }
 
-.footer {
+.left, .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 35px;
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.btn {
+    width: 150px;
+    height: 150px;
+    border: transparent;
+    cursor: grab;
+    background-color: rgb(219, 224, 248);
+    border: 5px solid black;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    transition: all 0.3s ease;
+    border-color: yellow;
+    box-shadow: 0px 0px 20px yellow;
+}
+
+
+.credits {
+    margin-top: auto;
     background-color: rgb(42, 50, 66);
     font-family: 'Press Start 2P', cursive;
     font-size: 10px;
     color: aliceblue;
     display: flex;
     justify-content: center;
+    align-items: flex-end;
     gap: 5px;
-    align-items: center;
     width: 100%;
     padding: 10px 0;
 }
 
-.footer a{
+.credits a{
     color: aliceblue;
     text-decoration: none;
 }
@@ -78,6 +109,6 @@ i {
     font-size: 15px;
 }
 
-.footer a:hover {
+.credits a:hover {
     color: rgb(162, 193, 253);
 }
