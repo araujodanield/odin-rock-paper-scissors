@@ -10,25 +10,42 @@
 </head>
 
 <body>
-    <h1 class="title">ROCK PAPER SCISSORS - CONSOLE VERSION</h1>
-    
-    <div class="tutorial">
-        <h2>HOW TO PLAY</h2>
+    <div class="container">
+        <header class="title">
+            <h1 >ROCK PAPER SCISSORS</h1>
+        </header>
+        
+        <main class="game-board">
+            <h2></h2>
 
-        <p>This is a version of Rock Paper Scissors to be played on your browser's console. To start the game:</p>
-        <ol>
-            <li>Press <b>Ctrl + Shift + I</b> on your keyboard, this will open the Console panel of DevTools;</li>
-            <li>Click on the white space, write "<span>game()</span>" and press <b>Enter</b>;</li>
-            <ul>
-                <li>If you canceled the game or finished the five rounds and want to play again you can just press <b>Up Arrow ↑ + Enter</b> on your keyboard and this will start the game without the need of writing the function again;</li>
-                <li>If you want to clear your previous rounds, write "<span>clear()</span>" and press <b>Enter</b>, or press this button:</li>
-                <img src="clearConsoleReference.png" alt="A print showing the 'clear console' button in DevTools">
-            </ul>
-        </ol>
-    </div>
+            <p>You have 5 chances to defeat the machine and save the world! Good Luck!</p>
+            <div class="option-choosed">
+                <div class="left">
+                    <p>Player:</p>
+                    <img src="images/question-mark.svg" alt="">
+                    <p>Score:</p>
+                    <p>0</p>
+                </div>
 
-    <div class="footer">
-        The Odin Project 2022 - Page created by <a href="https://github.com/araujodanield" target="_blank"><i class="devicon-github-original"></i> araujodanield</a>
+                <div class="right">
+                    <p>Computer:</p>
+                    <img src="images/question-mark.svg" alt="">
+                    <p>Score:</p>
+                    <p>0</p>
+                </div>
+            </div>
+            <div>Choose your weapon:</div>
+
+            <div class="buttons">
+                <button class="btn"><img src="images/rock.svg" alt=""></button>
+                <button class="btn"><img src="images/paper.svg" alt=""></button>
+                <button class="btn"><img src="images/scissors.svg" alt=""></button>
+            </div>
+        </main>
+        
+        <footer class="credits">
+            Created by <a href="https://github.com/araujodanield" target="_blank"><i class="devicon-github-original"></i> araujodanield
+        </footer>
     </div>
 </body>
 </html>
