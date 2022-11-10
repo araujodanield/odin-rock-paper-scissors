@@ -16,30 +16,30 @@
         </header>
         
         <main class="game-board">
-            <h2></h2>
+            <h2 id="final-result"></h2>
 
-            <p>You have 5 chances to defeat the machine and save the world! Good Luck!</p>
-            <div class="option-choosed">
+            <p id="current-round">You have 5 chances to defeat the machine and save the world! Good Luck!</p>
+            <div class="choice-score">
                 <div class="left">
                     <p>Player:</p>
-                    <img src="images/question-mark.svg" alt="">
+                    <img id="player-choice" src="images/question-mark.svg" alt="">
                     <p>Score:</p>
-                    <p>0</p>
+                    <p id="player-score">0</p>
                 </div>
 
                 <div class="right">
                     <p>Computer:</p>
-                    <img src="images/question-mark.svg" alt="">
+                    <img id="cpu-choice" src="images/question-mark.svg" alt="">
                     <p>Score:</p>
-                    <p>0</p>
+                    <p id="cpu-score">0</p>
                 </div>
             </div>
             <div>Choose your weapon:</div>
 
             <div class="buttons">
-                <button class="btn"><img src="images/rock.svg" alt=""></button>
-                <button class="btn"><img src="images/paper.svg" alt=""></button>
-                <button class="btn"><img src="images/scissors.svg" alt=""></button>
+                <button id="btnRock" class="btn"><img src="images/rock.svg" alt=""></button>
+                <button id="btnPaper" class="btn"><img src="images/paper.svg" alt=""></button>
+                <button id="btnScissors" class="btn"><img src="images/scissors.svg" alt=""></button>
             </div>
         </main>
         
