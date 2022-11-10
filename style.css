@@ -47,7 +47,7 @@ h2 {
     color: tomato;
 }
 
-.option-choosed {
+.choice-score {
     display: flex;
     justify-content: space-around;
     align-items: center;
