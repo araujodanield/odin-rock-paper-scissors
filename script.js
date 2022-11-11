@@ -1,4 +1,4 @@
-//CONSOLE VERSION (skip to line 96 for UI version);
+//CONSOLE VERSION (for UI version skip to line 96);
 
 let choices = ["Rock", "Paper", "Scissors"];
 let userChoice;
@@ -84,7 +84,7 @@ function game() {
             if (playerScore === computerScore) {
                 playerScore = 0;
                 computerScore = 0;
-                return "WOW! THE GAME ENDED IN A DRAW! DOES THAT MEAN HUMANS AND MACHINES THINK THE SAME? hmm";
+                return "WOW! THE GAME ENDED IN A DRAW! DOES THAT MEANS HUMANS AND MACHINES THINK THE SAME? hmm";
             } else if (playerScore > computerScore) {
                 playerScore = 0;
                 computerScore = 0;
@@ -102,14 +102,19 @@ function game() {
 // UI VERSION
 
 const gameButtons = document.querySelectorAll("button");
+const finalResult = document.getElementById("final-result");
+const roundDisplay = document.getElementById("round-count");
+const roundResult = document.getElementById("current-round");
 const playerChoiceIcon = document.getElementById("player-choice");
 const cpuChoiceIcon = document.getElementById("cpu-choice");
-const roundResult = document.getElementById("current-round")
-const finalResult = document.getElementById("final-result")
-const playerScoreDisplay = document.getElementById("player-score")
-const cpuScoreDisplay = document.getElementById("cpu-score")
+const playerScoreDisplay = document.getElementById("player-score");
+const cpuScoreDisplay = document.getElementById("cpu-score");
+const restartOverlay = document.getElementById("overlay");
+const restartButton = document.getElementById("restart-button")
+let roundCount;
 let playerChoice;
 let cpuChoice;
+
 
 function getCpuChoice() {
     let random = Math.floor(Math.random() * choices.length);
@@ -123,7 +128,7 @@ function getCpuChoice() {
     } else if (choices[random] === "Scissors") {
         cpuChoiceIcon.src= "images/scissors.svg"
         cpuChoice = "Scissors"
-    }
+    };
 };
 
 function getBothChoices() {
@@ -139,7 +144,7 @@ function getBothChoices() {
             } else if (button.id === "btnScissors") {
                 playerChoiceIcon.src= "images/scissors.svg"
                 playerChoice = "Scissors"
-            }
+            };
 
             getCpuChoice();
         });
@@ -156,24 +161,31 @@ function gameRound() {
         button.addEventListener("click", () => {
         
             if (playerChoice === cpuChoice) {
+                roundResult.style.color = "grey"
                 roundResult.textContent="It's a DRAW!";
             }  else if (playerChoice === "Rock" && cpuChoice === "Scissors") {
-                roundResult.textContent="You WON this round! Rock beats Scissors!";
+                roundResult.style.color = "blue"
+                roundResult.textContent="Nice! You WON this round! Rock beats Scissors!";
                 playerScore++
             } else if (playerChoice === "Paper" && cpuChoice === "Rock") {
-                roundResult.textContent="You WON this round! Paper beats Rock!";
+                roundResult.style.color = "blue"
+                roundResult.textContent="Yes! You WON this round! Paper beats Rock!";
                 playerScore++
             } else if (playerChoice === "Scissors" && cpuChoice === "Paper") {
-                roundResult.textContent="You WON this round! Scissors beats Paper!";
+                roundResult.style.color = "blue"
+                roundResult.textContent="Good! You WON this round! Scissors beats Paper!";
                 playerScore++
             } else if (playerChoice === "Rock" && cpuChoice === "Paper") {
-                roundResult.textContent="You LOSE this round! Paper beats Rock!";
+                roundResult.style.color = "red"
+                roundResult.textContent="Oof, you LOSE this round! Paper beats Rock!";
                 computerScore++
             } else if (playerChoice === "Paper" && cpuChoice === "Scissors") {
-                roundResult.textContent="You LOSE this round! Scissors beats Paper!";
+                roundResult.style.color = "red"
+                roundResult.textContent="Oh no, you LOSE this round! Scissors beats Paper!";
                 computerScore++
             } else if (playerChoice === "Scissors" && cpuChoice === "Rock") {
-                roundResult.textContent="You LOSE this round! Rock beats Scissors!";
+                roundResult.style.color = "red"
+                roundResult.textContent="Oops, you LOSE this round! Rock beats Scissors!";
                 computerScore++
             };
 
@@ -184,7 +196,37 @@ function gameRound() {
 };
 
 function checkWinner() {
-    console.log()
+    roundCount = 0;
+    gameRound();
+    gameButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            roundCount++
+            roundDisplay.textContent = roundCount + "º ROUND"
+            if (playerScore === 5) {
+                    finalResult.textContent="CONGRATULATIONS!!! YOU WON AND THANKS TO YOU WE'LL LIVE ANOTHER DAY!";
+                    restartOverlay.style.display = "flex"
+                } else if (computerScore === 5) {
+                    finalResult.textContent="YOU LOST... OH MY, I WONDER WHAT WILL HAPPEN WITH US NOW...";
+                    restartOverlay.style.display = "flex"
+                }
+        });
+    });
 };
 
-gameRound();
+
+restartButton.addEventListener("click", () => {
+    playerScore = 0
+    computerScore = 0
+    roundCount = 0
+    finalResult.textContent = "";
+    roundDisplay.textContent = ""
+    roundResult.textContent = "You need to score 5 points to defeat the machine and save the world! Good Luck!"
+    roundResult.style.color = ""
+    playerChoiceIcon.src= "images/question-mark.svg"
+    cpuChoiceIcon.src= "images/question-mark.svg"
+    playerScoreDisplay.textContent = playerScore;
+    cpuScoreDisplay.textContent = computerScore;
+    restartOverlay.style.display = "none";
+});
+
+checkWinner();
