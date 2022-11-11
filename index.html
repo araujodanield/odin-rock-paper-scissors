@@ -9,43 +9,46 @@
     <script src="script.js" defer></script>
 </head>
 
-<body>
-    <div class="container">
-        <header class="title">
-            <h1 >ROCK PAPER SCISSORS</h1>
-        </header>
-        
-        <main class="game-board">
-            <h2 id="final-result"></h2>
-
-            <p id="current-round">You have 5 chances to defeat the machine and save the world! Good Luck!</p>
-            <div class="choice-score">
-                <div class="left">
-                    <p>Player:</p>
-                    <img id="player-choice" src="images/question-mark.svg" alt="">
-                    <p>Score:</p>
-                    <p id="player-score">0</p>
-                </div>
-
-                <div class="right">
-                    <p>Computer:</p>
-                    <img id="cpu-choice" src="images/question-mark.svg" alt="">
-                    <p>Score:</p>
-                    <p id="cpu-score">0</p>
-                </div>
-            </div>
-            <div>Choose your weapon:</div>
-
-            <div class="buttons">
-                <button id="btnRock" class="btn"><img src="images/rock.svg" alt=""></button>
-                <button id="btnPaper" class="btn"><img src="images/paper.svg" alt=""></button>
-                <button id="btnScissors" class="btn"><img src="images/scissors.svg" alt=""></button>
-            </div>
-        </main>
-        
-        <footer class="credits">
-            Created by <a href="https://github.com/araujodanield" target="_blank"><i class="devicon-github-original"></i> araujodanield
-        </footer>
+<body class="container">
+    <div id="overlay">
+        <h2 id="final-result"></h2>
+        <a id="restart-button">Play <br> Again</a>
     </div>
+
+    <header class="title">
+        <h1>ROCK PAPER SCISSORS</h1>
+    </header>
+    
+    <main class="game-board">
+        <p id="round-count"></p>
+        <p id="current-round" class="info-text">You need to score 5 points to defeat the machine and save the world! Good Luck!</p>
+
+        <div class="info-display">
+            <div class="left">
+                <p>Player:</p>
+                <img id="player-choice" src="images/question-mark.svg" alt="">
+                <p>Score:</p>
+                <p id="player-score" class="score">0</p>
+            </div>
+
+            <div class="right">
+                <p>Computer:</p>
+                <img id="cpu-choice" src="images/question-mark.svg" alt="">
+                <p>Score:</p>
+                <p id="cpu-score" class="score">0</p>
+            </div>
+        </div>
+
+        <div>Choose your weapon:</div>
+        <div class="buttons">
+            <button id="btnRock" class="btn"><img class="btnIcon" src="images/rock.svg" alt=""></button>
+            <button id="btnPaper" class="btn"><img class="btnIcon" src="images/paper.svg" alt=""></button>
+            <button id="btnScissors" class="btn"><img class="btnIcon" src="images/scissors.svg" alt=""></button>
+        </div>
+    </main>
+    
+    <footer class="credits">
+        Created by <a href="https://github.com/araujodanield" target="_blank"><i class="devicon-github-original"></i> araujodanield
+    </footer>
 </body>
 </html>
