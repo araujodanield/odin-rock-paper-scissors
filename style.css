@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
 * {
     margin: 0;
@@ -13,6 +13,8 @@
     justify-content: space-between;
     align-items: center;
     color: rgb(42, 50, 66);
+    text-align: center;
+    font-family: 'Share Tech Mono', monospace;
 }
 
 img {
@@ -26,7 +28,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Press Start 2P', cursive;
+    font-size: 25px;
     margin-top: 50px;
     color: rgb(42, 50, 66);
     text-shadow: 5px 3px 5px rgba(0, 0, 0, 0.212);
@@ -43,15 +45,15 @@ img {
     width: 100%;
 }
 
-h2 {
-    color: tomato;
-}
-
-.choice-score {
+.info-display {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 50%;
+}
+
+.info-text {
+    font-weight: bold;
 }
 
 .left, .right {
@@ -61,7 +63,13 @@ h2 {
     justify-content: center;
     gap: 10px;
     font-size: 35px;
+    font-weight: bold;
 }
+
+.score {
+    font-weight: 500;
+}
+
 .buttons {
     display: flex;
     justify-content: center;
@@ -85,12 +93,10 @@ h2 {
     box-shadow: 0px 0px 20px yellow;
 }
 
-
 .credits {
     margin-top: auto;
     background-color: rgb(42, 50, 66);
-    font-family: 'Press Start 2P', cursive;
-    font-size: 10px;
+    font-size: 20px;
     color: aliceblue;
     display: flex;
     justify-content: center;
@@ -111,4 +117,47 @@ i {
 
 .credits a:hover {
     color: rgb(162, 193, 253);
+    text-shadow: 0px 0px 10px rgb(194 211 243);
+    transition: all 0.3s ease;
+}
+
+#overlay {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#final-result {
+    color: rgb(219, 224, 248);
+    font-size: 40px;
+    text-shadow: 0px 0px 10px rgb(0, 0, 0);
+}
+
+#restart-button {
+    display: flex;
+    flex-direction: column;
+    cursor: grab;
+    padding: 50px;
+    font-size: 25px;
+    background-color: rgb(50, 63, 88);
+    color: rgb(179, 183, 202);
+    border: 5px solid rgb(179, 183, 202);
+    border-radius: 100%;
+    box-shadow: 3px 6px 20px black
+}
+
+#restart-button:hover {
+    background-color: rgb(42, 53, 73);
+    color: rgb(202, 206, 226);
+    border-color: rgb(202, 206, 226);
+    box-shadow: 0px 0px 15px rgb(219, 224, 248);
+    text-shadow: 0px 0px 20px rgb(219, 224, 248);
+    transition: all 0.3s ease;
 }
