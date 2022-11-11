@@ -15,6 +15,9 @@
     color: rgb(42, 50, 66);
     text-align: center;
     font-family: 'Share Tech Mono', monospace;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
 }
 
 img {
@@ -22,6 +25,9 @@ img {
     max-width: 80px;
     min-height: 80px;
     max-height: 80px;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
 }
 
 .title {
