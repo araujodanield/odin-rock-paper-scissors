@@ -1,6 +1,6 @@
-<img height="15px" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/twitter/322/flag-united-states_1f1fa-1f1f8.png">[ Read this document in english](README.md)
+<img height="15px" src="https://em-content.zobj.net/thumbs/120/twitter/322/flag-united-states_1f1fa-1f1f8.png">[ Read this document in english](README.md)
 
-# Rock Paper Scissors Game
+# Pedra, Papel e Tesoura
 Terceiro projeto do curso <a href="https://www.theodinproject.com/about">The Odin Project</a>.
 
 Este é um projeto de duas versões de um jogo de Pedra, Papel e Tesoura, para colocar em prática o uso de multiplas funções e manipulação de objetos com o JavaScript.
